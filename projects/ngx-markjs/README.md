@@ -1,24 +1,43 @@
-# NgxMarkjs
+# ngx-markjs
 
 This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.0.
 
-## Code scaffolding
+This is a Angular 13 Wrapper for [Mark.js](https://markjs.io/).
 
-Run `ng generate component component-name --project ngx-markjs` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ngx-markjs`.
-> Note: Don't forget to add `--project ngx-markjs` or else it will be added to the default project in your `angular.json` file. 
+## How to Use
+Install the NPM package:
+> $ npm i @lmaos/ngx-markjs
 
-## Build
+Import the Module into your project:
+```typescript
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
 
-Run `ng build ngx-markjs` to build the project. The build artifacts will be stored in the `dist/` directory.
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { NgxMarkjsModule } from '@lmaos/ngx-markjs'; // Add this
 
-## Publishing
+@NgModule({
+	declarations: [AppComponent],
+	imports: [
+		BrowserModule,
+		AppRoutingModule,
+		NgxMarkjsModule, // Add this
+	],
+	providers: [],
+	bootstrap: [AppComponent],
+})
+export class AppModule {}
+```
 
-After building your library with `ng build ngx-markjs`, go to the dist folder `cd dist/ngx-markjs` and run `npm publish`.
 
-## Running unit tests
+## Usage
+start Using the library via implementing the directory:
+```typescript
+<div class="card-container" 
+markjsHighlight //add the directive to your div
+[markjsConfig]={} 
+[markjsHighlight]="filteredText">Test Text</div>
+```
 
-Run `ng test ngx-markjs` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Find a minimal example at the [demo Repository](https://github.com/lmaos-txt/ngx-markjs-demo).
