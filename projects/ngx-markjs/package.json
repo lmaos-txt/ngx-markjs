@@ -1,15 +1,13 @@
 {
 	"name": "@lmaos/ngx-markjs",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"peerDependencies": {
 		"@angular/common": "^13.1.0",
 		"@angular/core": "^13.1.0",
-		"mark.js": "^8.11.1"
+		"mark.js": "^8.11.1",
+		"@types/mark.js": "^8.11.7"
 	},
 	"dependencies": {
 		"tslib": "^2.3.0"
-	},
-	"devDependencies": {
-		"@types/mark.js": "^8.11.7"
 	}
 }
