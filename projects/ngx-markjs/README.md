@@ -1,14 +1,29 @@
 # ngx-markjs
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.0.
-
 This is a Angular 13 Wrapper for [Mark.js](https://markjs.io/).
 
 ## How to Use
+
 Install the NPM package:
+
 > $ npm i @lmaos/ngx-markjs
 
+Add the following to your `tsconfig`
+
+```json
+{
+	...
+  	"compilerOptions": {
+		...
+		"allowSyntheticDefaultImports": true,
+		...
+	}
+	...
+}
+```
+
 Import the Module into your project:
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
@@ -30,13 +45,14 @@ import { NgxMarkjsModule } from '@lmaos/ngx-markjs'; // Add this
 export class AppModule {}
 ```
 
-
 ## Usage
+
 start Using the library via implementing the directory:
+
 ```typescript
-<div class="card-container" 
+<div class="card-container"
 markjsHighlight //add the directive to your div
-[markjsConfig]={} 
+[markjsConfig]={}
 [markjsHighlight]="filteredText">Test Text</div>
 ```
 
