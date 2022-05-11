@@ -47,13 +47,22 @@ export class AppModule {}
 
 ## Usage
 
-start Using the library via implementing the directory:
+start using the library via implementing the directive:
 
 ```typescript
 <div class="card-container"
 markjsHighlight //add the directive to your div
 [markjsConfig]={}
 [markjsHighlight]="filteredText">Test Text</div>
+```
+
+or via the `MarkjsHighlight` class
+
+```typescript
+
+import { MarkjsHighlight } from '@lmaos/ngx-markjs';
+...
+MarkjsHighlight.mark(this.testCard.nativeElement, 'ngx');
 ```
 
 Find a minimal example at the [demo Repository](https://github.com/lmaos-txt/ngx-markjs-demo).
